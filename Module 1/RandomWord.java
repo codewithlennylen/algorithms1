@@ -55,24 +55,24 @@ public class RandomWord{
     public static void main (String[] args){
 
         String champion_word = null;
-        int word_count = 0;
+        double word_count = 0;
 
 
-        while (StdIn.isEmpty() != true){
+        while (!StdIn.isEmpty()){
             String next_word = StdIn.readString();
             word_count = word_count + 1;
 
-            if (word_count == 1){
-                champion_word = next_word;
-            }else{
+            // if (word_count == 1){
+            //     champion_word = next_word;
+            // }else{
                 // Generate a random number between 1 and word_count (i)
-                float p = 1 / word_count;
+                double p = 1.0 / word_count;
                 boolean random_choice = StdRandom.bernoulli(p); // Returns a random boolean from a Bernoulli distribution with success probability p.
 
                 if (random_choice == true){
                     champion_word = next_word;
                 }
-            }
+            // }
 
         }
         
