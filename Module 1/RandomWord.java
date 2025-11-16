@@ -77,6 +77,6 @@ public class RandomWord{
         }
         
         
-        System.out.println("Champion Word: " + champion_word);
+        System.out.println(champion_word);
     }
 }
